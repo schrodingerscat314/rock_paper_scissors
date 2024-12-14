@@ -2,9 +2,14 @@
 
  // Get user choice for rock, paper, scissors
 
-userChoice = prompt("Enter your choice of rock, paper, or scissors: ");
-userChoice = userChoice.toLowerCase();
-console.log("User:", userChoice);
+function getUserChoice(){
+    userChoice = prompt("Enter your choice of rock, paper, or scissors: ");
+    userChoice = userChoice.toLowerCase();
+    console.log("User:", userChoice);
+}
+
+getUserChoice();
+
 
  // Get computer choice for rock, paper, scissors 
 
@@ -32,8 +37,41 @@ function getComputerChoice(){
 
 getComputerChoice();
 
+//declaring players score variables 
 
+let humanScore = 0;
+let computerScore = 0;
 
+//logic to play a single round 
+
+function playRound(userChoice, computerChoice){
+    if(userChoice == "scissors" && computerChoice == "paper"){
+        console.log("You win, scissors beats paper");
+        humanScore+=1;
+    }
+    else if(userChoice == "paper" && computerChoice == "rock"){
+        console.log("You win, paper beats rock");
+        humanScore+=1;
+    }
+    else if(userChoice == "rock" && computerChoice == "scissors"){
+        console.log("You win, rock beats scissors");
+        humanScore+=1;
+    }
+    else if(computerChoice == "scissors" && userChoice == "paper"){
+        console.log("You lose, scissors beats paper");
+        computerScore+=1;
+    }
+    else if(computerChoice == "paper" && userChoice == "rock"){
+        console.log("You lose, paper beats rock");
+        computerScore+=1;
+    }
+    else if(computerChoice == "rock" && userChoice == "scissors"){
+        console.log("You win, rock beats scissors");
+        computerScore+=1;
+    }
+
+    return 0;
+}
 
 
 

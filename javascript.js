@@ -1,5 +1,13 @@
  // console.log("Hello World")
 
+ // Get user choice for rock, paper, scissors
+
+userChoice = prompt("Enter your choice of rock, paper, or scissors: ");
+userChoice = userChoice.toLowerCase();
+console.log("User:", userChoice);
+
+ // Get computer choice for rock, paper, scissors 
+
 let x = Math.floor(Math.random() * 3);
 
 console.log(x);
@@ -7,22 +15,25 @@ console.log(x);
 function getComputerChoice(){
   
     if (x===0){
-        computerChoice = "Rock";
-        console.log("Rock");
+        computerChoice = "rock";
+        console.log("Computer: rock");
     }
     else if (x===1){
-        computerChoice = "Paper";
-        console.log("Paper");
+        computerChoice = "paper";
+        console.log("Computer: paper");
     }
     else if (x===2){
-        computerChoice = "Scissors";
-        console.log("Scissors");
+        computerChoice = "scissors";
+        console.log("Computer: scissors");
     }
     
     return 0;
 }
 
 getComputerChoice();
+
+
+
 
 
 

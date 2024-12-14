@@ -69,11 +69,15 @@ function playRound(userChoice, computerChoice){
         console.log("You win, rock beats scissors");
         computerScore+=1;
     }
+    else if(computerChoice == "rock" && userChoice == "rock"){
+        console.log("It's a tie");
+    }
+    else if(computerChoice == "scissors" && userChoice == "scissors"){
+        console.log("It's a tie");
+    }
+    else if(computerChoice == "paper" && userChoice == "paper"){
+        console.log("It's a tie");
+    }
 
     return 0;
 }
-
-
-
- 
-

@@ -82,4 +82,24 @@ function playRound(userChoice, computerChoice){
     return 0;
 }
 
-playRound(userChoice, computerChoice);
+
+//new function to play 5 rounds of the game and declare winner 
+
+num = Number(prompt("How many times do you want to play rock, paper, scissors?"))
+function playGame(num){
+    for(i=0; i<num; i++){
+        playRound(userChoice, computerChoice);
+    }
+    console.log("Your score is:", humanScore);
+    console.log("The computer's score is", computerScore);
+
+    if(humanScore > computerScore){
+        console.log("You win!");
+    }
+    else if(humanScore < computerScore){
+        console.log("You lose...");
+    }
+    else if(humanScore == computerScore){
+        console.log("It's a tie.");
+    }
+}

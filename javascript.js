@@ -8,16 +8,14 @@ function getUserChoice(){
     console.log("User:", userChoice);
 }
 
-getUserChoice();
 
 
  // Get computer choice for rock, paper, scissors 
 
-let x = Math.floor(Math.random() * 3);
-
-console.log(x);
 
 function getComputerChoice(){
+
+let x = Math.floor(Math.random() * 3);
   
     if (x===0){
         computerChoice = "rock";
@@ -35,7 +33,6 @@ function getComputerChoice(){
     return 0;
 }
 
-getComputerChoice();
 
 //declaring players score variables 
 
